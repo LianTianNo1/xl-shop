@@ -14,4 +14,12 @@
 
 <style>
 	/*每个页面公共css */
+	@import "@/static/font/iconfont.css";
+	.iconfont {
+	  font-family: "iconfont" !important;
+	  font-size: 16px;
+	  font-style: normal;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	}
 </style>

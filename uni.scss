@@ -13,6 +13,15 @@
  */
 
 /* 颜色变量 */
+/* 自定义颜色 */
+$myblue: rgba(80,193,233,1);
+$myzi: rgba(122,87,209,1);
+$mylu: rgba(91,231,196,1);
+$mybai: rgba(245,247,250,1);
+$myhui: #ccc;
+$myhui2: rgba(163, 157, 154, 0.2);
+$mytheme_text : rgba(245,247,250,1);
+$mytheme : rgba(255, 0, 0, 1);
 
 /* 行为相关颜色 */
 $uni-color-primary: #007aff;
@@ -32,6 +41,7 @@ $uni-bg-color:#ffffff;
 $uni-bg-color-grey:#f8f8f8;
 $uni-bg-color-hover:#f1f1f1;//点击状态颜色
 $uni-bg-color-mask:rgba(0, 0, 0, 0.4);//遮罩颜色
+
 
 /* 边框颜色 */
 $uni-border-color:#c8c7cc;
