@@ -3,7 +3,8 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "首页"
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh":true
 			}
 		}, {
 			"path": "pages/news/news",
@@ -29,8 +30,8 @@
             "path" : "pages/goods/goods",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
+                "navigationBarTitleText": "商城",
+                "enablePullDownRefresh": true
             }
             
         }
@@ -38,7 +39,7 @@
             "path" : "pages/contact/contact",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "联系我们",
                 "enablePullDownRefresh": false
             }
             
@@ -47,7 +48,7 @@
             "path" : "pages/pics/pics",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "图片展示",
                 "enablePullDownRefresh": false
             }
             
@@ -63,9 +64,9 @@
         }
     ],
 	"globalStyle": {
-		"navigationBarTextStyle": "white",
+		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "小浪商城",
-		"navigationBarBackgroundColor": "red",
+		"navigationBarBackgroundColor": "white",
 		"backgroundColor": "rgba(245,247,250,1)"
 	},
 	"tabBar": {
