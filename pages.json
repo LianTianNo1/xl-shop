@@ -4,65 +4,35 @@
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "首页",
-				"enablePullDownRefresh":true
+				"enablePullDownRefresh": true
 			}
 		}, {
-			"path": "pages/news/news",
+			"path": "pages/pics/pics",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "图片展示",
 				"enablePullDownRefresh": false
 			}
-		}, {
+		},{
 			"path": "pages/cart/cart",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "购物车",
 				"enablePullDownRefresh": false
 			}
 		}, {
-			"path": "pages/member/member",
+			"path": "pages/contact/contact",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "联系我们",
+				"enablePullDownRefresh": true
+			}
+
+		}, {
+			"path": "pages/goods/goods",
+			"style": {
+				"navigationBarTitleText": "商品详情",
 				"enablePullDownRefresh": false
 			}
 		}
-
-	    ,{
-            "path" : "pages/goods/goods",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "商城",
-                "enablePullDownRefresh": true
-            }
-            
-        }
-        ,{
-            "path" : "pages/contact/contact",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "联系我们",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/pics/pics",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "图片展示",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/videos/videos",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "小浪商城",
@@ -71,9 +41,9 @@
 	},
 	"tabBar": {
 		// 选中颜色
-		"selectedColor":"rgb(220,57,36)",
+		"selectedColor": "rgb(220,57,36)",
 		// 字体颜色
-		"color":"#ccc",
+		"color": "#ccc",
 		"list": [{
 			"text": "首页",
 			"pagePath": "pages/index/index",
@@ -81,10 +51,10 @@
 			"selectedIconPath": "static/icon/home-active.png"
 
 		}, {
-			"text": "资讯",
-			"pagePath": "pages/news/news",
-			"iconPath": "static/icon/news.png",
-			"selectedIconPath": "static/icon/news-active.png"
+			"text": "图片",
+			"pagePath": "pages/pics/pics",
+			"iconPath": "static/icon/pics.png",
+			"selectedIconPath": "static/icon/pics-active.png"
 
 		}, {
 			"text": "购物车",
@@ -93,10 +63,10 @@
 			"selectedIconPath": "static/icon/cart-active.png"
 
 		}, {
-			"text": "我的",
-			"pagePath": "pages/member/member",
-			"iconPath": "static/icon/member.png",
-			"selectedIconPath": "static/icon/member-active.png"
+			"text": "关于",
+			"pagePath": "pages/contact/contact",
+			"iconPath": "static/icon/contact.png",
+			"selectedIconPath": "static/icon/contact-active.png"
 
 		}]
 	}

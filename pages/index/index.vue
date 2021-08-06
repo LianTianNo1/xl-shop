@@ -1,16 +1,16 @@
 <template>
 	<view class="home">
 
-		<view class="nav">
+		<!-- <view class="nav">
 			<view class="nav_item" v-for="(item,index) in navs" :key="index" @click="navItem(item.path)">
 				<view hover-class="nav_hover" :class="item.icon"></view>
 				<text>{{item.title}}</text>
 			</view>
-		</view>
+		</view> -->
 		<good-banner></good-banner>
 		<view class="hot_goods">
 			<view class="head_title iconfont">&#xe65b;热门商品</view>
-			<good-list></good-list>
+			<good-list @clickGoodsItem="navItem($event)"></good-list>
 
 		</view>
 	</view>
@@ -30,35 +30,19 @@
 		data() {
 			return {
 				// 导航
-				navs: [{
-						icon: 'iconfont icon-shangcheng',
-						title: '商城',
-						path: '/pages/goods/goods'
-					},
-					{
-						icon: 'iconfont icon-lianxi',
-						title: '联系',
-						path: '/pages/contact/contact'
-					},
-					{
-						icon: 'iconfont icon-tupian',
-						title: '图片',
-						path: '/pages/pics/pics'
-					},
-					{
-						icon: 'iconfont icon-shipin',
-						title: '视频',
-						path: '/pages/videos/videos'
-					}
-				]
 			}
 		},
 		onLoad() {
 			// 获取商品列表
 			this.getGoodsList()
+			// 获取购物车内容
+			if(this.cartList.length === 0){
+				this.getCartList();
+			}
+			
 		},
 		computed: {
-			...mapState(['goodsList'])
+			...mapState(['goodsList','cartList'])
 		},
 		onReachBottom() {
 			// 到底了继续获取商品列表
@@ -79,12 +63,12 @@
 			'good-banner': banner
 		},
 		methods: {
-			...mapMutations(['updateGoodList', 'clearGoodsList']),
+			...mapMutations(['updateGoodList','getCartList', 'clearGoodsList']),
 			...mapActions(['getGoodsList']),
 			// 跳转导航
-			navItem(url) {
+			navItem(id) {
 				uni.navigateTo({
-					url
+					url:`../goods/goods?id=${id}`
 				})
 			},
 		}

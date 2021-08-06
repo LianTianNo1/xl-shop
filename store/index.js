@@ -10,10 +10,55 @@ export default new Vuex.Store({
 		// 轮播
 		swiperList1: [],
 		swiperList2: [],
+		// 购物车列表
+		cartList: [],
+		// 购物车状态
+		activeState: false
+
 	},
 	mutations: {
+		// 改变购物车选中状态
+		changState(state, params) {
+			state.cartList[params[0]].selected = params[1];
+		},
+		// 删除购物车
+		removeCart(state) {
+			state.cartList = state.cartList.filter(item => {
+				return item.selected === false
+			});
+			// 更新缓存数据
+			uni.setStorage({
+				key: 'cartList',
+				data: JSON.stringify(state.cartList),
+				success: function() {
+					console.log('更新缓存');
+				}
+			});
+			state.activeState = (state.cartList.lenght > 0) ? true : false
+			console.log(state.activeState);
+		},
+		// 添加购物车
+		addCartList(state, shop) {
+			uni.setStorage({
+				key: 'cartList',
+				data: JSON.stringify(state.cartList),
+				success: function() {
+					state.cartList.push(shop);
+				}
+			});
+		},
+		// 获取购物车内容
+		getCartList(state) {
+			uni.getStorage({
+				key: 'cartList',
+				success: function(res) {
+					// console.log(res);
+					state.cartList = JSON.parse(res.data)
+				}
+			});
+		},
 		// 清空商品列表
-		clearGoodsList(state){
+		clearGoodsList(state) {
 			state.goodsList = []
 		},
 		// 更新商品列表
@@ -24,7 +69,7 @@ export default new Vuex.Store({
 		upateSwiperList(state, item) {
 			if (state.swiperList1.length < 5) {
 				state.swiperList1.push(item)
-			}else if(state.swiperList2.length < 5) {
+			} else if (state.swiperList2.length < 5) {
 				state.swiperList2.push(item)
 			}
 		}

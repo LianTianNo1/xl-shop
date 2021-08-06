@@ -1,6 +1,6 @@
 <template>
 	<view class="goods_list">
-		<view class="goods_item" v-for="(item,index) in goodsList" :key="index">
+		<view @click="$emit('clickGoodsItem',item.id)"  class="goods_item" v-for="(item,index) in goodsList" :key="index">
 			<image :src="item.img_url" mode="aspectFit"></image>
 			<view class="info">
 				<view class="price">
@@ -18,7 +18,6 @@
 <script>
 	import {
 		mapState,
-		mapMutations
 	} from 'vuex'
 	export default {
 		data() {
@@ -31,7 +30,7 @@
 		},
 		computed: {
 			...mapState(['goodsList'])
-		}
+		},
 
 	}
 </script>
@@ -45,14 +44,14 @@
 		background-color: $myhui2;
 
 		.goods_item {
-			margin: 15rpx 0 0;
+			margin: 20rpx 0 0;
 			padding: 0 0 20rpx;
 			background-color: $mybai;
 			box-sizing: border-box;
 			width: 354rpx;
 			border-radius: 20rpx;
 			overflow: hidden;
-
+			box-shadow: 2px 2px 5px $myhui2,-2px -2px 5px $mybai;
 			image {
 				margin: 20rpx 0;
 				width: 100%;

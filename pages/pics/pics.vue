@@ -12,9 +12,7 @@
 					<image @click="previewImg(item.goods_small_logo)" :src="item.goods_small_logo || '图片加载出错'" mode="widthFix"></image>
 					<text>{{item.goods_name || ''}}</text>
 				</view>
-				<view v-else>
-					暂无数据
-				</view>
+				
 			</view>
 		</scroll-view>
 
@@ -108,6 +106,8 @@
 				border-right: 1px solid $myhui;
 
 				view {
+					border-radius:15rpx ;
+					box-shadow: 0px 1px 1px $myhui2;
 					border-bottom: 1px solid $myhui;
 					height: 120rpx;
 					line-height: 120rpx;

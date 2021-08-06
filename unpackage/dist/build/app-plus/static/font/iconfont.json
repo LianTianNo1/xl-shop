@@ -1,0 +1,44 @@
+{
+  "id": "2721497",
+  "name": "小浪商城",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "12095300",
+      "name": "火",
+      "font_class": "huo",
+      "unicode": "e65b",
+      "unicode_decimal": 58971
+    },
+    {
+      "icon_id": "4449448",
+      "name": "商城",
+      "font_class": "shangcheng",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "1761497",
+      "name": "图片",
+      "font_class": "tupian",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "4954929",
+      "name": "视频",
+      "font_class": "shipin",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "5661141",
+      "name": "联系",
+      "font_class": "lianxi",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    }
+  ]
+}
